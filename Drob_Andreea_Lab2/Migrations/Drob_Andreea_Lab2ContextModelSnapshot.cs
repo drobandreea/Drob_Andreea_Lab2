@@ -136,7 +136,7 @@ namespace Drob_Andreea_Lab2.Migrations
             modelBuilder.Entity("Drob_Andreea_Lab2.Models.Book", b =>
                 {
                     b.HasOne("Drob_Andreea_Lab2.Models.Author", "Author")
-                        .WithMany()
+                        .WithMany("Books")
                         .HasForeignKey("AuthorID");
 
                     b.HasOne("Drob_Andreea_Lab2.Models.Publisher", "Publisher")

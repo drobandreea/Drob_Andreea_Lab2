@@ -8,9 +8,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Drob_Andreea_Lab2.Data;
 using Drob_Andreea_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace Drob_Andreea_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
+
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Drob_Andreea_Lab2.Data.Drob_Andreea_Lab2Context _context;
